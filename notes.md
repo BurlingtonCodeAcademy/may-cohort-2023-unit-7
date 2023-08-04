@@ -35,3 +35,4 @@
   - Import the component into App.jsx and mount it between the Header and Footer components.
 */
 ```
+
