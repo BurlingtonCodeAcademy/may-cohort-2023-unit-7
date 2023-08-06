@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import AboutMe from './components/aboutme/AboutMe';
 import Employees from './components/employeeinformation/Employees';
+import PresidentVoting from './components/presidents/PresidentVoting';
 
 /* 
   Props: Properties 
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <AboutMe />
       <Employees />
+      <PresidentVoting />
       <Footer />
     </div>
   );
