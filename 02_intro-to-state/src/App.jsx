@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import Nav from './components/nav/Nav';
 import Welcome from './components/welcome/Welcome';
+import Counter from './components/counter/Counter';
+import CounterHardMode from './components/counter/CounterHardMode';
 
 /* 
   State:
@@ -19,6 +21,9 @@ function App() {
 
   // useState lets us have flexible data
   const [ names, setNames ] = useState(['Frodo', 'Sam', 'Pippin', 'Merry']);
+
+  // Counter state for hard mode challenge!
+  const [ count, setCount ] = useState(0);
 
   // Build a function that maps over names to display a welcome to each
   const displayWelcome = () => {
@@ -45,6 +50,8 @@ function App() {
       <Welcome name={names}/>
       */}
       {displayWelcome()}
+      <Counter />
+      <CounterHardMode count={count} setCount={setCount}/>
     </div>
   );
 }
