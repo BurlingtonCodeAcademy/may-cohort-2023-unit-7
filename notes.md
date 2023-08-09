@@ -111,3 +111,17 @@ function useState(startingData) {
       - Leave the count inside App.jsx
   */
 ```
+
+## Re-Rendering
+- We can use a callback function to help with rendering processess.
+- useState can take raw value but also a callback function.
+
+ex: 
+```jsx
+// raw value
+const [ count, setCount ] = useState(0);
+
+// CB function
+const [ count, setCount ] = useState(() => 0);
+```
+- Callback function renders initial value ONCE.

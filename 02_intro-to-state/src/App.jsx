@@ -4,6 +4,8 @@ import Nav from './components/nav/Nav';
 import Welcome from './components/welcome/Welcome';
 import Counter from './components/counter/Counter';
 import CounterHardMode from './components/counter/CounterHardMode';
+import Sample from './components/sample/Sample';
+import AddUser from './components/add-user/AddUser';
 
 /* 
   State:
@@ -20,7 +22,8 @@ function App() {
   let name = 'Ferdinand'; */
 
   // useState lets us have flexible data
-  const [ names, setNames ] = useState(['Frodo', 'Sam', 'Pippin', 'Merry']);
+  // const [ names, setNames ] = useState(['Frodo', 'Sam', 'Pippin', 'Merry']);
+  const [ names, setNames ] = useState([]);
 
   // Counter state for hard mode challenge!
   const [ count, setCount ] = useState(0);
@@ -41,6 +44,10 @@ function App() {
     }))
   }
 
+  // for Sample.jsx
+  // const obj = {
+  //   names, count, setCount
+  // }
 
   // Good form is to keep rfc return "clean"
   return (
@@ -49,9 +56,15 @@ function App() {
       {/* Create props key value pair to pass to child Welcome, where name is the key and the value is getting data from the variable name initialized above. 
       <Welcome name={names}/>
       */}
-      {displayWelcome()}
+      <AddUser names={names} setNames={setNames} />
+      {
+        names.length > 0 ?
+          displayWelcome() :
+          <h1 style={{textAlign: "center"}}>Add a User</h1>
+      }
+      {/*<Sample myObj={obj} />*/}
       <Counter />
-      <CounterHardMode count={count} setCount={setCount}/>
+      {/*<CounterHardMode count={count} setCount={setCount}/>*/}
     </div>
   );
 }
