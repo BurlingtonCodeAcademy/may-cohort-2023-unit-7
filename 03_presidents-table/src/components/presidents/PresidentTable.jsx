@@ -3,7 +3,7 @@ import PresidentRow from './PresidentRow'
 
 function PresidentTable(props) {
 
-    // console.log(props)
+    console.log(props)
 
     /* 
     ! Challenge:
@@ -14,9 +14,15 @@ function PresidentTable(props) {
                 - All data should return back as "Yes" with our current data.
     */
 
+    const makeReverse = () => {
+        console.log('hit')
+        props.setReverse(!props.reverse)
+    }
+
     return (
         <>
             <h2>{props.title}</h2>
+            <button onClick={makeReverse}>Reverse</button>
             <table>
                 <thead>
                     <tr>
@@ -24,6 +30,7 @@ function PresidentTable(props) {
                         <th>Last Name</th>
                         <th>Birth Year</th>
                         <th>Alive</th>
+                        <th>Age</th>
                     </tr>
                 </thead>
                 <tbody>
