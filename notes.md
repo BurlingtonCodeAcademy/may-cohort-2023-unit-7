@@ -125,3 +125,14 @@ const [ count, setCount ] = useState(0);
 const [ count, setCount ] = useState(() => 0);
 ```
 - Callback function renders initial value ONCE.
+
+# useRef
+- is a hook
+- values persist and don't cause re-renders of the page.
+- returns only one item
+  - an object called "current"
+- must be imported in with 'react'
+
+```jsx
+import { useRef } from 'react';
+```
