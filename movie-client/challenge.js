@@ -1,0 +1,23 @@
+/* 
+    - Create a login folder within auth.
+        - Create a JSX file called login (consider how the file/folder should be set) - DONE
+    - Create a functional component called Login
+    - Setup a form:
+        - Above the form, make an h2 that displays "Login" - DONE
+        - Use components from Reactstrap (hint: consider Signup) 
+        - No labels are required.
+        - Two input fields: 
+            - email: use a placeholder to denote "Email"
+            - password: use a placeholder to denote "Password" - DONE
+    - Import useRef:
+        - create variables to reference both email & password.
+        - incorporate within the Input components  - DONE
+    - Handle Submit - DONE
+        - Set the form to fire off an async function called "handleSubmit"
+            - write is as an arrow function.
+        - Within the function
+            - console.log both useRef variables that were established.
+    - Export the component. - DONE
+    - Import & mount the Login component within Auth.jsx
+        - Note: Frame the component in the same fashion as Signup.
+*/

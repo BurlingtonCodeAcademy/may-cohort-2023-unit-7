@@ -136,3 +136,26 @@ const [ count, setCount ] = useState(() => 0);
 ```jsx
 import { useRef } from 'react';
 ```
+
+# useEffect()
+- Comes from React
+- Allows us to perform side effects in function components.
+  - function
+  - dependency
+    - optional
+    - Can denotes a specific event to trigger
+
+```js
+useEffect(() => {
+  // runs every render
+})
+
+useEffect(() => {
+  // Runs only on the first render
+},[])
+
+useEffect(() => {
+  // Run on first render
+  // Runs any time a dependecny changes
+},[state])
+```
