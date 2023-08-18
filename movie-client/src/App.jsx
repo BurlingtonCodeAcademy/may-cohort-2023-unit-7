@@ -3,10 +3,11 @@ import Auth from './components/auth/Auth';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MovieIndex from './components/movie/MovieIndex';
+import MovieEdit from './components/movie/MovieEdit';
 
 function App() {
 
-  const [ sessionToken, setSessionToken ] = useState('Sample Token');
+  const [ sessionToken, setSessionToken ] = useState('');
   
   console.log('Token: ', sessionToken)
 
@@ -31,6 +32,10 @@ function App() {
         <Route 
           path='/movie'
           element={<MovieIndex token={sessionToken} />}
+        />
+        <Route
+          path='/movie/update/:id'
+          element={<MovieEdit token={sessionToken} />}
         />
       </Routes>
 

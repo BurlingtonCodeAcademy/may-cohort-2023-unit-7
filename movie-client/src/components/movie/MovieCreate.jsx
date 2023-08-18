@@ -67,7 +67,8 @@ function MovieCreate(props) {
             const res = await fetch(url, requestOption);
             const data = await res.json();
 
-            console.log(data);
+            // console.log(data);
+            props.fetchMovies();
         } catch (err) {
             console.error(err.message);
         }
